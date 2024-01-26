@@ -178,7 +178,7 @@ if image_files_list:
         try:
             for frame_processor in get_frame_processors_modules(roop.globals.frame_processors):
                 print('frame_processor',frame_processor)
-                if not frame_processor.pre_start():
+                if not frame_processor.pre_start() or not frame_processor.pre_check():
                     print('检查失败')
             if has_image_extension(file):
                 #roop.globals.frame_processors = []

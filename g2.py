@@ -132,7 +132,8 @@ def list_images_in_directory(directory,img):
 
 
 # 指定要遍历的目录路径
-rrr = get_user_input("请输入图像文件名: ")
+#rrr = get_user_input("请输入图像文件名: ")
+rrr = '6'
 directory_path = './target/'+rrr
 img = './target/'+rrr+'/'+rrr+'.jpg'
 # 获取目录下所有图片文件的列表

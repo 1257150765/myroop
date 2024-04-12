@@ -48,8 +48,8 @@ def prepare():
         roop.globals.frame_processors.append('face_enhancer')
     print(roop.globals.frame_processors)
     execution_providers = []
-    if 'cuda' not in execution_providers:
-        execution_providers.append('cuda')
+    if 'cpu' not in execution_providers:
+        execution_providers.append('cpu')
         roop.globals.execution_providers = decode_execution_providers(execution_providers)
         print(roop.globals.execution_providers)
 
@@ -77,7 +77,7 @@ def decode_execution_providers(execution_providers: List[str]) -> List[str]:
 def suggest_max_memory() -> int:
     if platform.system().lower() == 'darwin':
         return 4
-    return 10
+    return 16
 
 
 def suggest_execution_providers() -> List[str]:
